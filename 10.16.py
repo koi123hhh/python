@@ -1,0 +1,112 @@
+#set集合集合中的元素唯一，去重，无序的，适用于列表，元组，字符串，字典
+#字符串
+a=set('1234')#{'1', '4', '3', '2'}
+print(a)
+#列表
+b=set([1,2,3])#{1, 2, 3}
+print(b)
+#元组
+c=set((1,2,3,4))
+print(c)
+#字典：无序可变有索引的集合，包含键和值两部分：前是键后是值
+d={
+    'age':'16',#必须要加逗号，否则会报错
+    'name':'heqimeng'
+}
+e=set(d)
+print(e)#输出的只有键{'name', 'age'}
+#用大括号创建集合集合中可以放数字，元组，字符串但不可以放列表，和字典
+aa={1,2,3,(123),"12,3"}
+print(aa)
+#字符串的去重
+#列表的去重
+bb=set([1,2,3,1,1,1])
+print(bb)
+#元组的去重
+cc=set((1,2,3,1,1,1,1,))
+print(cc)
+#字典去重
+dd={
+    'mingzi':'heqimeng',#字典一定要记得加逗号
+    'mingzi':'xiaoming'
+}
+ee=set(dd)
+print(ee)#字典的去重只针对于键
+#特殊的
+ff=set('12111')
+print(ff)
+gg={1,2,1,3,'11112'}
+print(gg)#{1, 2, 3, '11112'}
+#集合的添加add和合并update
+h={1,2,3,4}
+h.add('nihao')
+print(h)
+i={'wo','ai','ni'}
+i.update(h)
+print(i)
+#集和删除元素的方法
+#remove只能删除集合中原有的元素如果没有的话会报错
+j={1,2,3,4}
+j.remove(1)
+print(j)
+#pop随机删除集合中元素
+k={1,2,3,4}
+k.pop()
+print(k)
+#discard如果集合中有元素直接删除如果没有仍打印原来的元素
+l={'wo','si','heqimeng'}
+l.discard('nihao')
+print(l)
+#集合的交集&合并集|
+a1={1,2,3,4,5}
+a2={4,5,6,7,8,}
+a3=a1&a2
+a4=a1|a2
+print(a4)
+#字典的创建方式
+#1.用大括号创建键值对键可以是字符串，数字，元组不可变类型
+b1={
+    'nianling':'heqimeng',
+    'age':17,
+    (1,2,3):'123',
+    12:13
+}
+print(b1)
+#2.dict(元组套列表)列表和列表之间加逗号
+b2=dict((['mingzi','heqimeng'],['age',18]))
+print(b2)
+#空字典和空集合
+c1={}#空字典
+c2=set()#空集合
+print(c2)
+#字典的增删补查
+d1={
+    'mingzi':'heqimeng',
+    'age':16
+}
+d1['jineng']='python'#增
+del d1['jineng']#S删
+d1['mingzi']='muzhoulaoshi'#改
+print(d1['mingzi'])
+#字典的操作方法
+#1。get函数
+s1={
+    'mingzi':'heqimeng',
+    'age':16}
+s2=s1.get('mingzi')
+s3=s1.get('jineng','python')
+print(s3)
+#keys函数#获取字典中所有的键如果字典当中还有小字典只显示最外层字典中的键
+print(s1.keys())
+#items返回键值对 valves返回值
+g1={
+    'mingzi':'heqimeng',
+    'age':16
+}
+g2=g1.items()
+g3=g1.values()
+print(g3)
+n=1
+for n in range ():
+    n=(n+1)*2
+    print(n)
